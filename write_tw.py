@@ -1,0 +1,26 @@
+with open('tailwind.config.js', 'w', encoding='utf-8') as f:
+    f.write(
+'/** @type {import(' + chr(39) + 'tailwindcss' + chr(39) + ').Config} */\n'
+'export default {\n'
+'  content: [\n'
+'    ' + chr(39) + './index.html' + chr(39) + ',\n'
+'    ' + chr(39) + './src/**/*.{js,ts,jsx,tsx}' + chr(39) + ',\n'
+'  ],\n'
+'  theme: {\n'
+'    extend: {\n'
+'      colors: {\n'
+'        navy: {\n'
+'          50: ' + chr(39) + '#f0f4ff' + chr(39) + ',\n'
+'          500: ' + chr(39) + '#1B2A6B' + chr(39) + ',\n'
+'          600: ' + chr(39) + '#162259' + chr(39) + ',\n'
+'          700: ' + chr(39) + '#111a47' + chr(39) + ',\n'
+'        },\n'
+'        gold: ' + chr(39) + '#D4AF37' + chr(39) + ',\n'
+'        red: ' + chr(39) + '#C8102E' + chr(39) + ',\n'
+'      },\n'
+'    },\n'
+'  },\n'
+'  plugins: [],\n'
+'}\n'
+    )
+print('OK: tailwind.config.js')

@@ -1,0 +1,31 @@
+with open('src/components/SkeletonCard.jsx', 'w', encoding='utf-8') as f:
+    lines = [
+        'export default function SkeletonCard() {',
+        '  return (',
+        '    <div className="bg-white rounded-2xl shadow-md p-5 border border-gray-100 animate-pulse">',
+        '      <div className="flex items-center justify-between">',
+        '        <div className="flex-1">',
+        '          <div className="flex items-center gap-3 mb-3">',
+        '            <div className="h-8 w-24 bg-gray-200 rounded-lg"/>',
+        '            <div className="h-4 w-4 bg-gray-200 rounded"/>',
+        '            <div className="h-8 w-24 bg-gray-200 rounded-lg"/>',
+        '            <div className="h-6 w-20 bg-gray-200 rounded-full"/>',
+        '          </div>',
+        '          <div className="flex gap-4">',
+        '            <div className="h-4 w-16 bg-gray-200 rounded"/>',
+        '            <div className="h-4 w-24 bg-gray-200 rounded"/>',
+        '            <div className="h-4 w-20 bg-gray-200 rounded"/>',
+        '          </div>',
+        '        </div>',
+        '        <div className="text-right ml-4">',
+        '          <div className="h-8 w-20 bg-gray-200 rounded-lg mb-2"/>',
+        '          <div className="h-4 w-16 bg-gray-200 rounded mb-2"/>',
+        '          <div className="h-10 w-28 bg-gray-200 rounded-xl"/>',
+        '        </div>',
+        '      </div>',
+        '    </div>',
+        '  );',
+        '}',
+    ]
+    f.write('\n'.join(lines) + '\n')
+print('OK: SkeletonCard.jsx')

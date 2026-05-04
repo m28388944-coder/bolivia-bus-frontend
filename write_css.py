@@ -1,0 +1,28 @@
+with open('src/index.css', 'w', encoding='utf-8') as f:
+    f.write(
+'@tailwind base;\n'
+'@tailwind components;\n'
+'@tailwind utilities;\n'
+'\n'
+'@layer base {\n'
+'  body {\n'
+'    @apply bg-gray-50 text-gray-900;\n'
+'  }\n'
+'}\n'
+'\n'
+'@layer components {\n'
+'  .btn-primary {\n'
+'    @apply bg-navy-500 hover:bg-navy-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg;\n'
+'  }\n'
+'  .btn-secondary {\n'
+'    @apply bg-red border-2 border-navy-500 text-navy-500 font-semibold py-3 px-6 rounded-lg transition-all duration-200;\n'
+'  }\n'
+'  .card {\n'
+'    @apply bg-white rounded-xl shadow-md p-6 border border-gray-100;\n'
+'  }\n'
+'  .input-field {\n'
+'    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy-500 focus:border-transparent transition-all;\n'
+'  }\n'
+'}\n'
+    )
+print('OK: index.css')

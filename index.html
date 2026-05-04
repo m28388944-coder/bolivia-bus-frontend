@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+    <style>
+    @media print {
+      body * { visibility: hidden; }
+      .ticket-print, .ticket-print * { visibility: visible; }
+      .ticket-print {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        transform: scale(0.85);
+        transform-origin: top center;
+      }
+      .no-print { display: none !important; }
+      @page {
+        size: A4;
+        margin: 6mm;
+      }
+    }
+  </style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
