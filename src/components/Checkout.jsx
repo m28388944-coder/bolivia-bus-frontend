@@ -46,7 +46,7 @@ function MapaRastreo({ placa, onClose }) {
   useEffect(() => {
     const fetchBus = async () => {
       try {
-        const res = await fetch("http://localhost:8000/tracking/latest");
+        const res = await fetch("https://bolivia-bus-backend.onrender.com/tracking/latest");
         const data = await res.json();
         const buses = data.buses || [];
         const bus = placa ? (buses.find(b => b.bus_id === placa) || buses[0]) : buses[0];
@@ -437,3 +437,4 @@ export default function Checkout({ schedule, seats = [], onBack, onComplete }) {
     </div>
   );
 }
+

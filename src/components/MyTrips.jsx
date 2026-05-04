@@ -15,7 +15,7 @@ function MapaRastreo({ viaje, onClose }) {
 
   const fetchBus = async () => {
     try {
-      const res = await api.get("http://localhost:8000/tracking/latest");
+      const res = await api.get("https://bolivia-bus-backend.onrender.com/tracking/latest");
       const buses = res.data.buses || [];
       const bus = placa
         ? buses.find(b => b.bus_id === placa) || buses[0]
@@ -316,3 +316,4 @@ export default function MyTrips({ onSearch }) {
     </div>
   );
 }
+
